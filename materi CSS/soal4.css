@@ -1,0 +1,123 @@
+/* Reset Box-Sizing agar padding & border tidak merusak lebar kolom */
+* {
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f7f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #5c3a21;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0 0 8px 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    color: #f0e6dc;
+}
+
+/* Container styles */
+.container {
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e0d8cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Column styles */
+.column {
+    float: left;
+    width: 31.33%;
+    margin: 1%;
+    background-color: #f4efe6;
+    padding: 15px;
+    border-radius: 6px;
+    min-height: 140px;
+}
+
+.column h2, .column h3 {
+    margin-top: 0;
+    color: #5c3a21;
+    border-bottom: 2px solid #d9cbb8;
+    padding-bottom: 6px;
+}
+
+.column ul {
+    padding-left: 18px;
+    margin-bottom: 0;
+}
+
+.column ul li {
+    margin-bottom: 6px;
+}
+
+/* Clearfix */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Grid styles */
+.row {
+    overflow: hidden;
+}
+
+/* Post styles (Text wrapping around image) */
+.post h2 {
+    margin-top: 0;
+    color: #5c3a21;
+}
+
+.post img {
+    float: left;
+    width: 42%;
+    max-width: 360px;
+    margin: 0 20px 15px 0;
+    border-radius: 8px;
+    border: 2px solid #e0d8cc;
+    object-fit: cover;
+}
+
+.post p {
+    margin-top: 0;
+    text-align: justify;
+}
+
+/* Media Queries untuk Layar Tablet & HP */
+@media (max-width: 768px) {
+    .column {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px 0;
+        min-height: auto;
+    }
+
+    .post img {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 15px 0;
+    }
+}
